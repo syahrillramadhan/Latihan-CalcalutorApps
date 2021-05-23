@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+*,
+*::before. *::before {
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: normal;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to top, #cfd9df 100%, #e2ebf0 100%);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #fff;
+  outline: none;
+  background-color: #d7dde8;
+}
+
+.calculator-grid > button:hover {
+  background-color: #c0cfed;
+}
+.btn-all-clear {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.btn-equals {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.output {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #757f9a;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-display {
+  color: #d7dde8;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+.output .current-display {
+  color: #fff;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+}
